@@ -36,3 +36,9 @@ Còn git merge là thực hiện merge bình thường tuy nhiên commit vẫn g
 
 touch __ : tạo file
 echo "" > file : chỉnh sửa file(thường là txt,..).
+.......
+.
+.
+.
+.
+...
