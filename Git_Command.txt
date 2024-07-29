@@ -35,4 +35,4 @@ Sử dụng các lệnh Git để quản lý phiên bản mã nguồn cục bộ
 Còn git merge là thực hiện merge bình thường tuy nhiên commit vẫn giữ nguyên SHA không thay đổi và cây git sẽ hiển thị không còn là đường thẳng nữa, ngoài ra git merge còn tạo ra 1 commit gọi là commit merge.
 
 touch __ : tạo file
-echo "" > file : chỉnh sửa file(thường là txt,..)
+echo "" > file : chỉnh sửa file(thường là txt,..).
