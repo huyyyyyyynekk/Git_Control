@@ -29,3 +29,9 @@ Sự kết hợp giữa Git và GitHub
 Sử dụng GitHub với Git:
 Bạn có thể lưu trữ các kho lưu trữ Git trên GitHub, làm cho chúng dễ dàng chia sẻ và cộng tác.
 Sử dụng các lệnh Git để quản lý phiên bản mã nguồn cục bộ, sau đó đẩy (git push) và kéo (git pull) các thay đổi từ GitHub.
+
+
+*Chú ý :  Ngoài ra khái niệm rebase hiểu đơn giản là biến commit của nhánh khác thành commit nhánh hiện tại (rebase nghĩa là chuyển cơ sở), bản chất là nó biến commit của nhánh cần merge thành commit của nhánh được merge (nghĩa là commit rebase sẽ được bê nguyên nội dung và snapshot sang nhánh mới nên trên tree log sẽ là 1 đường thẳng và các commit này đều bị thay đổi SHA dù giống nội dung và snap shot). 
+Còn git merge là thực hiện merge bình thường tuy nhiên commit vẫn giữ nguyên SHA không thay đổi và cây git sẽ hiển thị không còn là đường thẳng nữa, ngoài ra git merge còn tạo ra 1 commit gọi là commit merge.
+
+ 
