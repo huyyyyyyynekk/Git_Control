@@ -1,0 +1,9 @@
+git clone : Clone code 
+git pull origin :  cop code từ host
+git add . : lưu file 
+git commit : save tất cả file
+git push origin (main) : đẩy lên (__)
+git branch __ (tên nhánh) : tạo branch
+git checkout  __(tên nhánh ) : đổi nhánh 
+git fetch : Tải về các thay đổi từ remote repository mà không ảnh hưởng đến nhánh hiện tại.
+git merge : Hợp nhất các thay đổi từ một nhánh khác vào nhánh hiện tại của bạn.

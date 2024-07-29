@@ -7,3 +7,25 @@ git branch __ (tên nhánh) : tạo branch
 git checkout  __(tên nhánh ) : đổi nhánh 
 git fetch : Tải về các thay đổi từ remote repository mà không ảnh hưởng đến nhánh hiện tại.
 git merge : Hợp nhất các thay đổi từ một nhánh khác vào nhánh hiện tại của bạn.
+git push --set-upstream origin ___ :  +) Đẩy các commit mới từ nhánh cục bộ lên nhánh Test_Branch trên remote origin.
++) Thiết lập nhánh Test_Branch trên remote origin làm nhánh theo dõi mặc định cho nhánh cục bộ hiện tại. Điều này có nghĩa là trong tương lai, bạn có thể sử dụng các lệnh git pull và git push mà không cần phải chỉ định nhánh từ xa mỗi lần.
+
+*GitHub là gì?
+
++)GitHub là một nền tảng lưu trữ mã nguồn dựa trên web sử dụng Git để quản lý phiên bản.
+Được thành lập vào năm 2008 và sau đó được Microsoft mua lại vào năm 2018.
+Cung cấp giao diện web để quản lý các kho lưu trữ Git.
+Hỗ trợ làm việc nhóm, theo dõi vấn đề (issue tracking), yêu cầu kéo (pull requests), và nhiều tính năng khác phục vụ phát triển phần mềm.
+Cho phép lưu trữ các dự án công khai và riêng tư.
+Cung cấp các tính năng bổ sung như GitHub Actions (tự động hóa CI/CD), GitHub Pages (lưu trữ trang web), và GitHub Marketplace (ứng dụng và dịch vụ).
+Các tính năng GitHub phổ biến:
+
++)Repositories (Kho lưu trữ): Nơi lưu trữ mã nguồn và theo dõi các thay đổi.
+Forking: Tạo một bản sao của một kho lưu trữ để thực hiện thay đổi mà không ảnh hưởng đến kho lưu trữ gốc.
+Pull Requests: Đề xuất các thay đổi để được xem xét và hợp nhất vào kho lưu trữ gốc.
+Issues: Theo dõi lỗi, nhiệm vụ, và các yêu cầu tính năng.
+Actions: Thiết lập và quản lý các workflow tự động hóa.
+Sự kết hợp giữa Git và GitHub
+Sử dụng GitHub với Git:
+Bạn có thể lưu trữ các kho lưu trữ Git trên GitHub, làm cho chúng dễ dàng chia sẻ và cộng tác.
+Sử dụng các lệnh Git để quản lý phiên bản mã nguồn cục bộ, sau đó đẩy (git push) và kéo (git pull) các thay đổi từ GitHub.
