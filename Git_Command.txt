@@ -1,7 +1,7 @@
 git clone : Clone code 
 git pull origin :  cop code từ host
 git add . : lưu file 
-git commit : save tất cả file
+git commit -m "..": save tất cả file và để lại comment.
 git push origin (main) : đẩy lên (__)
 git branch __ (tên nhánh) : tạo branch
 git checkout  __(tên nhánh ) : đổi nhánh 
