@@ -52,43 +52,43 @@ environment_pipeline = EnvironmentPipeline(
 <h2>Phần 2 : Izhikevich Verilog</h2>
 
 <h3> Design Code </h3>
-``` verilog 
-module Izhikevich (
+```verilog 
 
-    input clk,
-    input rst,
-    input signed [15:0] I_in,   			   // Input current
-    output reg signed [15:0] V, 			   // Membrane potential
-    output reg flag                            // Save the spike
-);
+    module Izhikevich (
+	    input clk,
+	    input rst,
+	    input signed [15:0] I_in,   			   // Input current
+	    output reg signed [15:0] V, 			   // Membrane potential
+	    output reg flag                            // Save the spike
+    );
 
-    parameter signed [15:0] a = 16'sd2;   		// Recovery time scale 
-    parameter signed [15:0] b = 16'sd2;   		// Sensitivity of u
-    parameter signed [15:0] c = -16'sd65; 		// Reset value for v
-    parameter signed [15:0] d = 16'sd8;   		// Reset increment for u
-    parameter signed [15:0] V_peak = 16'sd30;		//Threshold
-
-    reg signed [15:0] u; 				// Recovery variable
-
-    always @(posedge clk or posedge rst) begin
-        if (rst) begin
-	    flag <= 1'b0;
-            V <= -16'sd70; 
-            u <= 16'sd0;   
-        end 
-	else begin
-            if (V >= V_peak) begin
-		flag <= 1'b1;
-                V <= c;          
-                u <= u + d;         
-            end 
-	    else begin
-                flag <= 1'b0;
-                V <= V + ((16'sd4 / 16'sd100) * V * V) + 16'sd5 * V + 16'sd140 - u + I_in;
-                u <= u + (a / 16'sd100) * ((b / 16'sd10) * V - u);
-            end
-        end
-    end
+	    parameter signed [15:0] a = 16'sd2;   		// Recovery time scale 
+	    parameter signed [15:0] b = 16'sd2;   		// Sensitivity of u
+	    parameter signed [15:0] c = -16'sd65; 		// Reset value for v
+	    parameter signed [15:0] d = 16'sd8;   		// Reset increment for u
+	    parameter signed [15:0] V_peak = 16'sd30;		//Threshold
 	
-endmodule
+	    reg signed [15:0] u; 				// Recovery variable
+	
+	    always @(posedge clk or posedge rst) begin
+	        if (rst) begin
+		    flag <= 1'b0;
+	            V <= -16'sd70; 
+	            u <= 16'sd0;   
+	        end 
+		else begin
+	            if (V >= V_peak) begin
+			flag <= 1'b1;
+	                V <= c;          
+	                u <= u + d;         
+	            end 
+		    else begin
+	                flag <= 1'b0;
+	                V <= V + ((16'sd4 / 16'sd100) * V * V) + 16'sd5 * V + 16'sd140 - u + I_in;
+	                u <= u + (a / 16'sd100) * ((b / 16'sd10) * V - u);
+	            end
+	        end
+	    end
+		
+	endmodule
 ```
