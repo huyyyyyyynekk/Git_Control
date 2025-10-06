@@ -115,31 +115,29 @@ module Izhikevich_tb;
 	always #5 clk = ~clk; 
 	
 	initial begin
-		$dumpfile("waveform.vcd");
-		$dumpvars(0, Izhikevich_tb);
 
-	clk = 0;
-	rst = 1;
-	I_in = 0;
-
-	#10 rst = 0;
+		clk = 0;
+		rst = 1;
+		I_in = 0;
 	
-	// Test case with I_in small
-	I_in = 16'sd10;
-	#300;
-
-	// Test case with I_In bigger
-	I_in = 16'sd30;
-	#300;
-
-	// Test case with reset rst during the run
-	rst = 1;
-	#10 rst = 0;
-
-	#100;
-
-	$stop;
-	end
+		#10 rst = 0;
+		
+		// Test case with I_in small
+		I_in = 16'sd10;
+		#300;
+	
+		// Test case with I_In bigger
+		I_in = 16'sd30;
+		#300;
+	
+		// Test case with reset rst during the run
+		rst = 1;
+		#10 rst = 0;
+	
+		#100;
+	
+		$stop;
+		end
 
 	initial begin
 		$monitor($time, " Reset=%b, I_in=%d, v=%d, Flag=%b", 
@@ -148,3 +146,86 @@ module Izhikevich_tb;
 	
 endmodule
 ```
+
+<h3> Simulation</h3>
+* Transcript :
+
+```
+#					0  Reset=1, I_in=     0, v=   -70, Flag=0
+#                   10 Reset=0, I_in=    10, v=   -70, Flag=0
+#                   15 Reset=0, I_in=    10, v=  -270, Flag=0
+#                   25 Reset=0, I_in=    10, v= -1470, Flag=0
+#                   35 Reset=0, I_in=    10, v= -8670, Flag=0
+#                   45 Reset=0, I_in=    10, v= 13666, Flag=0
+#                   55 Reset=0, I_in=    10, v=   -65, Flag=1
+#                   65 Reset=0, I_in=    10, v=  -248, Flag=0
+#                   75 Reset=0, I_in=    10, v= -1346, Flag=0
+#                   85 Reset=0, I_in=    10, v= -7934, Flag=0
+#                   95 Reset=0, I_in=    10, v= 18074, Flag=0
+#                  105 Reset=0, I_in=    10, v=   -65, Flag=1
+#                  115 Reset=0, I_in=    10, v=  -256, Flag=0
+#                  125 Reset=0, I_in=    10, v= -1402, Flag=0
+#                  135 Reset=0, I_in=    10, v= -8278, Flag=0
+#                  145 Reset=0, I_in=    10, v= 16002, Flag=0
+#                  155 Reset=0, I_in=    10, v=   -65, Flag=1
+#                  165 Reset=0, I_in=    10, v=  -264, Flag=0
+#                  175 Reset=0, I_in=    10, v= -1458, Flag=0
+#                  185 Reset=0, I_in=    10, v= -8622, Flag=0
+#                  195 Reset=0, I_in=    10, v= 13930, Flag=0
+#                  205 Reset=0, I_in=    10, v=   -65, Flag=1
+#                  215 Reset=0, I_in=    10, v=  -272, Flag=0
+#                  225 Reset=0, I_in=    10, v= -1514, Flag=0
+#                  235 Reset=0, I_in=    10, v= -8966, Flag=0
+#                  245 Reset=0, I_in=    10, v= 11858, Flag=0
+#                  255 Reset=0, I_in=    10, v=   -65, Flag=1
+#                  265 Reset=0, I_in=    10, v=  -280, Flag=0
+#                  275 Reset=0, I_in=    10, v= -1570, Flag=0
+#                  285 Reset=0, I_in=    10, v= -9310, Flag=0
+#                  295 Reset=0, I_in=    10, v=  9786, Flag=0
+#                  305 Reset=0, I_in=    10, v=   -65, Flag=1
+#                  310 Reset=0, I_in=    30, v=   -65, Flag=1
+#                  315 Reset=0, I_in=    30, v=  -268, Flag=0
+#                  325 Reset=0, I_in=    30, v= -1486, Flag=0
+#                  335 Reset=0, I_in=    30, v= -8794, Flag=0
+#                  345 Reset=0, I_in=    30, v= 12894, Flag=0
+#                  355 Reset=0, I_in=    30, v=   -65, Flag=1
+#                  365 Reset=0, I_in=    30, v=  -276, Flag=0
+#                  375 Reset=0, I_in=    30, v= -1542, Flag=0
+#                  385 Reset=0, I_in=    30, v= -9138, Flag=0
+#                  395 Reset=0, I_in=    30, v= 10822, Flag=0
+#                  405 Reset=0, I_in=    30, v=   -65, Flag=1
+#                  415 Reset=0, I_in=    30, v=  -284, Flag=0
+#                  425 Reset=0, I_in=    30, v= -1598, Flag=0
+#                  435 Reset=0, I_in=    30, v= -9482, Flag=0
+#                  445 Reset=0, I_in=    30, v=  8750, Flag=0
+#                  455 Reset=0, I_in=    30, v=   -65, Flag=1
+#                  465 Reset=0, I_in=    30, v=  -292, Flag=0
+#                  475 Reset=0, I_in=    30, v= -1654, Flag=0
+#                  485 Reset=0, I_in=    30, v= -9826, Flag=0
+#                  495 Reset=0, I_in=    30, v=  6678, Flag=0
+#                  505 Reset=0, I_in=    30, v=   -65, Flag=1
+#                  515 Reset=0, I_in=    30, v=  -300, Flag=0
+#                  525 Reset=0, I_in=    30, v= -1710, Flag=0
+#                  535 Reset=0, I_in=    30, v=-10170, Flag=0
+#                  545 Reset=0, I_in=    30, v=  4606, Flag=0
+#                  555 Reset=0, I_in=    30, v=   -65, Flag=1
+#                  565 Reset=0, I_in=    30, v=  -308, Flag=0
+#                  575 Reset=0, I_in=    30, v= -1766, Flag=0
+#                  585 Reset=0, I_in=    30, v=-10514, Flag=0
+#                  595 Reset=0, I_in=    30, v=  2534, Flag=0
+#                  605 Reset=0, I_in=    30, v=   -65, Flag=1
+#                  610 Reset=1, I_in=    30, v=   -70, Flag=0
+#                  620 Reset=0, I_in=    30, v=   -70, Flag=0
+#                  625 Reset=0, I_in=    30, v=  -250, Flag=0
+#                  635 Reset=0, I_in=    30, v= -1330, Flag=0
+#                  645 Reset=0, I_in=    30, v= -7810, Flag=0
+#                  655 Reset=0, I_in=    30, v= 18846, Flag=0
+#                  665 Reset=0, I_in=    30, v=   -65, Flag=1
+#                  675 Reset=0, I_in=    30, v=  -228, Flag=0
+#                  685 Reset=0, I_in=    30, v= -1206, Flag=0
+#                  695 Reset=0, I_in=    30, v= -7074, Flag=0
+#                  705 Reset=0, I_in=    30, v= 23254, Flag=0
+#                  715 Reset=0, I_in=    30, v=   -65, Flag=1
+```
+* Waveform:
+
