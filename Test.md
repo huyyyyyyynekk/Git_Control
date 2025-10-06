@@ -48,3 +48,5 @@ environment_pipeline = EnvironmentPipeline(
 * environment : Môi trường trò chơi.
 * encoding : Mã hóa dữ liệu đầu vào theo phân phối chuẩn Bernoulli.
 * action_functionn : Chọn một hành động bằng cách sử dụng hàm softmax dựa trên số lượng spike (xung) phát ra từ một lớp trong mạng.
+
+<h2>Phần 2 : Izhikevich Verilog</h2>
