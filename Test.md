@@ -6,7 +6,7 @@
 
 -File "breakout.py" và file "breakout.py" đều dựa vào framework BindsNET khởi tạo mạng SNN cho game BreakoutDeterministic. 
 
-Tuy nhiên ở file "breakout.py", phần khỏi tạo liên kết giữa các lớp :
+<h3>Tuy nhiên ở file "breakout.py", phần khỏi tạo liên kết giữa các lớp :<h3>
 
 ``` python 
     inpt_middle = Connection(source=inpt, target=middle, wmin=0, wmax=1)
