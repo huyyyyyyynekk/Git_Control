@@ -1,6 +1,6 @@
 <h2>PHẦN 1 : File Breakout trong framework BinsdNET</h2>
 
-<h3>* STDP <Spike-Timing-Dependent Plasticity> : Là 1 quy tắc học tập sinh học trong mạng neuron. Nó nói rằng không chỉ việc 2 neuron bắn xung quang trọng mà còn quan trọng ai bắn trước, ai bắn sau.</h3>
+<h3> * STDP <Spike-Timing-Dependent Plasticity> : Là 1 quy tắc học tập sinh học trong mạng neuron. Nó nói rằng không chỉ việc 2 neuron bắn xung quang trọng mà còn quan trọng ai bắn trước, ai bắn sau.</h3>
 
 * (Bạn có thể tìm hiểu thêm tại đây : https://florian.io/papers/2007_Florian_Modulated_STDP.pdf)
   
@@ -33,4 +33,4 @@
 <h4>&Longrightarrow; Trọng số synapse thay đổi theo thời gian, sau nhiều vòng chơi hiệu suất được cải thiện. Việc sử dụng MSTDP đang mô phỏng mô hình Reinforcement Learning 1 cách sinh học trong não bộ.</h4>
 
 
-<h3>* Pipeline BindsNET : Là khung cho việc mô phỏng và huấn luyện mạng SNN của BinsdNET</h3>
+<h3> * Pipeline BindsNET : Là khung cho việc mô phỏng và huấn luyện mạng SNN của BinsdNET</h3>
