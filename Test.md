@@ -12,7 +12,7 @@ File "breakout.py" và file "breakout.py" đều dựa vào framework BindsNET k
     inpt_middle = Connection(source=inpt, target=middle, wmin=0, wmax=1)
     python middle_out = Connection(source=middle, target=out, wmin=0, wmax=1)
 ```
--> Không có quy tắc học (update_rule) nên các trọng số không thay đổi trong quá trình mô phỏng.
+&rarr; Không có quy tắc học (update_rule) nên các trọng số không thay đổi trong quá trình mô phỏng.
 
 <h3>Còn ở file "breakout_stdp.py" :</h3>
 
@@ -28,7 +28,7 @@ File "breakout.py" và file "breakout.py" đều dựa vào framework BindsNET k
         norm=0.5 * middle.n,
     )
 ```
--> Có quy tắc học theo MSTDP (MTSDP là quy tắc học quy tắc học dựa vào thời gian phát xung giữa neuron tiền-synapse và hậu-synapse).
+&rarr; Có quy tắc học theo MSTDP (MTSDP là quy tắc học quy tắc học dựa vào thời gian phát xung giữa neuron tiền-synapse và hậu-synapse).
 
 
 
