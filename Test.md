@@ -52,13 +52,14 @@ environment_pipeline = EnvironmentPipeline(
 <h2>Phần 2 : Izhikevich Verilog</h2>
 
 <h3> Design Code </h3>
-``` verilog
+``` verilog 
 module Izhikevich (
+
     input clk,
     input rst,
-    input signed [15:0] I_in,   			// Input current
-    output reg signed [15:0] V, 			// Membrane potential
-    output reg flag                                     // Save the spike
+    input signed [15:0] I_in,   			   // Input current
+    output reg signed [15:0] V, 			   // Membrane potential
+    output reg flag                            // Save the spike
 );
 
     parameter signed [15:0] a = 16'sd2;   		// Recovery time scale 
@@ -88,5 +89,6 @@ module Izhikevich (
             end
         end
     end
+	
 endmodule
 ```
