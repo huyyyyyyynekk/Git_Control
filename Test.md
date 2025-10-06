@@ -149,7 +149,7 @@ endmodule
 
 <h3> Simulation</h3>
 
-<h4> * Transcript :</h4>
+<h4> Transcript :</h4>
 
 ```
 #					0  Reset=1, I_in=     0, v=   -70, Flag=0
@@ -229,9 +229,8 @@ endmodule
 #                  715 Reset=0, I_in=    30, v=   -65, Flag=1
 ```
 
-<h4> * Waveform:</h4>
+<h4> Waveform:</h4>
 
 ![Hình ảnh waveform.](Waveform_RS.png)
 
-
-
+<h4>&Longrightarrow; Biểu đồ mô tả neuron bắn 1 vài spike đầu tiên với khoảng thời gian giữa các xung ngắn sau đó khoảng thời gian này tăng dần. Điều này đúng với kiểu bắn Regular Spiking trong mô hình Izhikevich.</h4> 
