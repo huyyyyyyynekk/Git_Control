@@ -231,6 +231,7 @@ endmodule
 
 <h4> * Waveform:</h4>
 
-![Hình ảnh waveform.](./Screenshot 2025-10-06 161056.png)
+![Hình ảnh waveform.](Waveform_RS.png)
+
 
 
