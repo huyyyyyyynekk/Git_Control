@@ -12,7 +12,7 @@
     inpt_middle = Connection(source=inpt, target=middle, wmin=0, wmax=1)
     python middle_out = Connection(source=middle, target=out, wmin=0, wmax=1)
 ```
-&rarr; Không có quy tắc học (update_rule) nên các trọng số không thay đổi trong quá trình mô phỏng.
+&rarr; Không có quy tắc học (update_rule) cụ thể nên các trọng số không thay đổi trong quá trình mô phỏng.
 
 <h3>Còn ở file "breakout_stdp.py" :</h3>
 
