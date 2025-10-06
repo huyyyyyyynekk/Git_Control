@@ -149,7 +149,7 @@ endmodule
 
 <h3> Simulation</h3>
 
-* Transcript :
+<h4>* Transcript :</h4>
 
 ```
 #					0  Reset=1, I_in=     0, v=   -70, Flag=0
@@ -229,6 +229,8 @@ endmodule
 #                  715 Reset=0, I_in=    30, v=   -65, Flag=1
 ```
 
-* Waveform:
+<h4>* Waveform:</h4>
+
+![Hình ảnh waveform.](./)
 
 
