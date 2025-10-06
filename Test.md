@@ -52,6 +52,7 @@ environment_pipeline = EnvironmentPipeline(
 <h2>Phần 2 : Izhikevich Verilog</h2>
 
 <h3> Design Code : </h3>
+``` verilog
 
     module Izhikevich (
 	    input clk,
@@ -92,6 +93,7 @@ environment_pipeline = EnvironmentPipeline(
 	endmodule
 
 <h3> Testbench Code :</h3>
+``` verilog
 
 	`timescale 1ns/1ps
 	
@@ -145,3 +147,5 @@ environment_pipeline = EnvironmentPipeline(
 	    end
 	
 	endmodule
+
+<>
