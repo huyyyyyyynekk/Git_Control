@@ -52,6 +52,7 @@ environment_pipeline = EnvironmentPipeline(
 <h2>Phần 2 : Izhikevich Verilog</h2>
 
 <h3> Design Code : </h3>
+
 ```verilog
 module Izhikevich (
 	input clk,
@@ -93,57 +94,57 @@ endmodule
 
 <h3> Testbench Code :</h3>
 
-	`timescale 1ns/1ps
-	
-	module Izhikevich_tb;
-	    reg clk;
-	    reg rst;
-	    reg signed [15:0] I_in;
-	    wire signed [15:0] V;
-	    wire flag;
-		
-	    Izhikevich dut (
-	        .clk(clk),
-	        .rst(rst),
-	        .I_in(I_in),
-	        .V(V),
-	        .flag(flag)
-	    );
-	
-	    always #5 clk = ~clk; 
-	
-	    initial begin
-	        $dumpfile("waveform.vcd");
-	        $dumpvars(0, Izhikevich_tb);
-	
-	        clk = 0;
-	        rst = 1;
-	        I_in = 0;
-	
-	        #10 rst = 0;
-	        
-	        // Test case with I_in small
-	        I_in = 16'sd10;
-	        #300;
-	
-	        // Test case with I_In bigger
-	        I_in = 16'sd30;
-	        #300;
-		
-	        // Test case with reset rst during the run
-	        rst = 1;
-	        #10 rst = 0;
-	
-	        #100;
-	
-	        $stop;
-	    end
-	
-	    initial begin
-	        $monitor($time, " Reset=%b, I_in=%d, v=%d, Flag=%b", 
-	                 rst, I_in, $signed (V), flag);
-	    end
-	
-	endmodule
+```verilog
+`timescale 1ns/1ps
 
-<>
+module Izhikevich_tb;
+	reg clk;
+	reg rst;
+	reg signed [15:0] I_in;
+	wire signed [15:0] V;
+	wire flag;
+	
+	Izhikevich dut (
+		.clk(clk),
+		.rst(rst),
+		.I_in(I_in),
+		.V(V),
+		.flag(flag)
+	);
+
+	always #5 clk = ~clk; 
+	
+	initial begin
+		$dumpfile("waveform.vcd");
+		$dumpvars(0, Izhikevich_tb);
+
+	clk = 0;
+	rst = 1;
+	I_in = 0;
+
+	#10 rst = 0;
+	
+	// Test case with I_in small
+	I_in = 16'sd10;
+	#300;
+
+	// Test case with I_In bigger
+	I_in = 16'sd30;
+	#300;
+
+	// Test case with reset rst during the run
+	rst = 1;
+	#10 rst = 0;
+
+	#100;
+
+	$stop;
+	end
+
+	initial begin
+		$monitor($time, " Reset=%b, I_in=%d, v=%d, Flag=%b", 
+				 rst, I_in, $signed (V), flag);
+	end
+	
+endmodule
+```
