@@ -52,7 +52,7 @@ environment_pipeline = EnvironmentPipeline(
 <h2>Phần 2 : Izhikevich Verilog</h2>
 
 <h3> Design Code </h3>
-```verilog 
+``` 
 
     module Izhikevich (
 	    input clk,
