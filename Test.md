@@ -42,9 +42,9 @@ environment_pipeline = EnvironmentPipeline(
     encoding=bernoulli,
     action_function=select_softmax,
     output="Output Layer",
-    time=100,
-    history_length=1,
-    delta=1,
-    render_interval=1,
 )
 ```
+* network : Mạng đã xây dựng.
+* environment : Môi trường trò chơi.
+* encoding : Mã hóa dữ liệu đầu vào theo phân phối chuẩn Bernoulli.
+* action_functionn : Chọn một hành động bằng cách sử dụng hàm softmax dựa trên số lượng spike (xung) phát ra từ một lớp trong mạng.
