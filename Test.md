@@ -8,8 +8,9 @@
 
 Tuy nhiên ở file "breakout.py", phần khỏi tạo liên kết giữa các lớp :
 
-``` python inpt_middle = Connection(source=inpt, target=middle, wmin=0, wmax=1) ```
-``` python middle_out = Connection(source=middle, target=out, wmin=0, wmax=1) ```
+``` python 
+    inpt_middle = Connection(source=inpt, target=middle, wmin=0, wmax=1)
+    python middle_out = Connection(source=middle, target=out, wmin=0, wmax=1) ```
 
 
 
