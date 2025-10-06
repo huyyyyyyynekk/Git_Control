@@ -148,6 +148,7 @@ endmodule
 ```
 
 <h3> Simulation</h3>
+
 * Transcript :
 
 ```
@@ -227,5 +228,7 @@ endmodule
 #                  705 Reset=0, I_in=    30, v= 23254, Flag=0
 #                  715 Reset=0, I_in=    30, v=   -65, Flag=1
 ```
+
 * Waveform:
+
 
