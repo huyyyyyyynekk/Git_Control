@@ -31,3 +31,5 @@
 &rarr; Có quy tắc học theo MSTDP (MTSDP là quy tắc học quy tắc học dựa vào thời gian phát xung giữa neuron tiền-synapse và hậu-synapse).
 
 <h4>&Longrightarrow; Trọng số synapse thay đổi theo thời gian, sau nhiều vòng chơi hiệu suất được cải thiện. Việc sử dụng MSTDP đang mô phỏng mô hình Reinforcement Learning 1 cách sinh học trong não bộ.</h4>
+
+* 
