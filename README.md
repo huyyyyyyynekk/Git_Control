@@ -122,3 +122,98 @@ Sau khi chạy:
 * Python nhận và xử lý
 * GUI hiển thị tín hiệu theo thời gian thực
 
+
+## PHẦN 3: Kết quả chạy
+
+Hệ thống được kiểm chứng trên cả môi trường mô phỏng (ModelSim) và thực nghiệm (Python + FPGA).
+Các chế độ neuron được đánh giá bao gồm: RS, IB, Chattering và LTS.
+
+---
+
+### A) ModelSim
+
+Kết quả mô phỏng được thực hiện bằng ModelSim thông qua testbench của module `neuron_model`.
+
+#### A.1 Regular Spiking (RS)
+
+* Spike xuất hiện đều theo thời gian
+* Khoảng cách giữa các spike ổn định
+
+<!-- ![RS ModelSim](images/modelsim_rs.png) -->
+
+---
+
+#### A.2 Intrinsically Bursting (IB)
+
+* Xuất hiện các cụm spike (burst)
+* Có khoảng nghỉ giữa các cụm
+
+<!-- ![IB ModelSim](images/modelsim_ib.png) -->
+
+---
+
+#### A.3 Chattering
+
+* Burst với mật độ spike cao
+* Các spike dày và liên tục
+
+<!-- ![Chattering ModelSim](images/modelsim_chattering.png) -->
+
+---
+
+#### A.4 Low Threshold Spiking (LTS)
+
+* Dễ phát xung với kích thích nhỏ
+* Ngưỡng thấp hơn RS
+
+<!-- ![LTS ModelSim](images/modelsim_lts.png) -->
+
+---
+
+### B) Python (Real-time Hardware)
+
+Kết quả thực nghiệm được thu từ FPGA thông qua UART và hiển thị bằng Python (PyQt5 + pyqtgraph).
+
+#### B.1 Regular Spiking (RS)
+
+* Tín hiệu ổn định, dạng spike đều
+* Khớp với mô phỏng ModelSim
+
+<!-- ![RS Python](images/python_rs.png) -->
+
+---
+
+#### B.2 Intrinsically Bursting (IB)
+
+* Burst rõ ràng, có chu kỳ
+* Biên độ và dạng sóng tương đồng mô phỏng
+
+<!-- ![IB Python](images/python_ib.png) -->
+
+---
+
+#### B.3 Chattering
+
+* Tần số cao, spike dày
+* Phản ánh đúng đặc tính neuron nhanh
+
+<!-- ![Chattering Python](images/python_chattering.png) -->
+
+---
+
+#### B.4 Low Threshold Spiking (LTS)
+
+* Phát xung ngay cả khi kích thích yếu
+* Dạng sóng nhạy hơn RS
+
+<!-- ![LTS Python](images/python_lts.png) -->
+
+---
+
+### Nhận xét tổng thể
+
+* Kết quả ModelSim và phần cứng thực tế có độ tương đồng cao
+* Hệ thống hoạt động ổn định ở thời gian thực
+* Giao thức UART đảm bảo truyền dữ liệu chính xác và liên tục
+
+
