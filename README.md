@@ -1,5 +1,17 @@
 ## PHẦN 1: Cấu trúc hệ thống phần cứng (FPGA Gowin Kiwi 1p5)
 
+## Pinout & Phần cứng
+
+Cấu hình chân cho FPGA Gowin Kiwi 1p5:
+
+Tín hiệu	Chân (PIN)	Mô tả
+clk	4	Clock hệ thống
+rst_n	35	Reset (active low)
+S1	36	Nút nhấn người dùng
+rx_serial	33	UART RX (từ PC → FPGA)
+tx_serial	34	UART TX (FPGA → PC)
+
+
 ### Giao thức UART 4-Bytes
 
 Hệ thống sử dụng giao thức UART để truyền dữ liệu thời gian thực giữa FPGA và máy tính.
