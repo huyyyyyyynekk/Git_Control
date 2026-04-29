@@ -6,6 +6,7 @@
   * [Cơ chế cập nhật tham số](#cơ-chế-cập-nhật-tham-số)
   * [Pinout (FPGA Gowin Kiwi 1p5)](#pinout-fpga-gowin-kiwi-1p5)
 
+
 * [PHẦN 2: Giao tiếp phía PC (Python)](#giao-tiếp-phía-pc-python)
   
   * [Giao diện hiển thị](#giao-diện-hiển-thị)
