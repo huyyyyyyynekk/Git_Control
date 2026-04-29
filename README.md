@@ -49,7 +49,7 @@ Cơ chế này cho phép chuyển đổi linh hoạt giữa điều khiển bằ
 
 ---
 
-### Giao tiếp phía PC (Python)
+## PHẦN 2: Giao tiếp phía PC (Python)
 
 ```python
 # Gửi tín hiệu đầu vào
