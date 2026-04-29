@@ -139,7 +139,7 @@ Kết quả mô phỏng được thực hiện bằng ModelSim thông qua testbe
 * Spike xuất hiện đều theo thời gian
 * Khoảng cách giữa các spike ổn định
 
-!-- ![RS ModelSim](images/RS.png) --
+ ![RS ModelSim](images/RS.png) 
 
 ---
 
@@ -148,7 +148,7 @@ Kết quả mô phỏng được thực hiện bằng ModelSim thông qua testbe
 * Xuất hiện các cụm spike (burst)
 * Có khoảng nghỉ giữa các cụm
 
-!-- ![IB ModelSim](images/IB.png) --
+ ![IB ModelSim](images/IB.png) 
 
 ---
 
@@ -157,7 +157,7 @@ Kết quả mô phỏng được thực hiện bằng ModelSim thông qua testbe
 * Burst với mật độ spike cao
 * Các spike dày và liên tục
 
-!-- ![Chattering ModelSim](images/Chattering.png) --
+ ![Chattering ModelSim](images/Chattering.png) 
 
 ---
 
@@ -166,7 +166,7 @@ Kết quả mô phỏng được thực hiện bằng ModelSim thông qua testbe
 * Dễ phát xung với kích thích nhỏ
 * Ngưỡng thấp hơn RS
 
-!-- ![LTS ModelSim](images/LTS.png) --
+ ![LTS ModelSim](images/LTS.png) 
 
 ---
 
