@@ -12,7 +12,7 @@
   * [Giao diện hiển thị](#giao-diện-hiển-thị)
   * [Hướng dẫn chạy](#hướng-dẫn-chạy)
 
-### Mục lục phần 3
+* [PHẦN 3: Kết quả chạy](#kết-quả-chạy)
 
 * [A) ModelSim](#a-modelsim)
 
