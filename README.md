@@ -123,6 +123,7 @@ Sau khi chạy:
 * GUI hiển thị tín hiệu theo thời gian thực
 
 
+
 ## PHẦN 3: Kết quả chạy
 
 Hệ thống được kiểm chứng trên cả môi trường mô phỏng (ModelSim) và thực nghiệm (Python + FPGA).
