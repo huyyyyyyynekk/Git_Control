@@ -14,19 +14,19 @@
 
 * [PHẦN 3: Kết quả chạy](#kết-quả-chạy)
 
-* [A) ModelSim](#a-modelsim)
+  * [A) ModelSim](#a-modelsim)
 
-  * [A.1 Regular Spiking (RS)](#a1-regular-spiking-rs)
-  * [A.2 Intrinsically Bursting (IB)](#a2-intrinsically-bursting-ib)
-  * [A.3 Chattering](#a3-chattering)
-  * [A.4 Low Threshold Spiking (LTS)](#a4-low-threshold-spiking-lts)
+     * [A.1 Regular Spiking (RS)](#a1-regular-spiking-rs)
+     * [A.2 Intrinsically Bursting (IB)](#a2-intrinsically-bursting-ib)
+     * [A.3 Chattering](#a3-chattering)
+     * [A.4 Low Threshold Spiking (LTS)](#a4-low-threshold-spiking-lts)
 
-* [B) Python (Real-time Hardware)](#b-python-real-time-hardware)
+  * [B) Python (Real-time Hardware)](#b-python-real-time-hardware)
 
-  * [B.1 Regular Spiking (RS)](#b1-regular-spiking-rs)
-  * [B.2 Intrinsically Bursting (IB)](#b2-intrinsically-bursting-ib)
-  * [B.3 Chattering](#b3-chattering)
-  * [B.4 Low Threshold Spiking (LTS)](#b4-low-threshold-spiking-lts)
+     * [B.1 Regular Spiking (RS)](#b1-regular-spiking-rs)
+     * [B.2 Intrinsically Bursting (IB)](#b2-intrinsically-bursting-ib)
+     * [B.3 Chattering](#b3-chattering)
+     * [B.4 Low Threshold Spiking (LTS)](#b4-low-threshold-spiking-lts)
 
 
 ## PHẦN 1: Cấu trúc hệ thống phần cứng (FPGA Gowin Kiwi 1p5)
