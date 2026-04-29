@@ -7,7 +7,7 @@
   * [Pinout (FPGA Gowin Kiwi 1p5)](#pinout-fpga-gowin-kiwi-1p5)
 
 
-* [PHẦN 2: Giao tiếp phía PC (Python)](#giao-tiếp-phía-pc-python)
+* [PHẦN 2: Giao tiếp phía PC](#giao-tiếp-phía-pc-python)
   
   * [Giao diện hiển thị](#giao-diện-hiển-thị)
   * [Hướng dẫn chạy](#hướng-dẫn-chạy)
@@ -75,7 +75,7 @@ Cơ chế này cho phép chuyển đổi linh hoạt giữa điều khiển bằ
 
 ---
 
-## PHẦN 2: Giao tiếp phía PC (Python)
+## PHẦN 2: Giao tiếp phía PC
 
 ```python
 # Gửi tín hiệu đầu vào
@@ -123,10 +123,9 @@ Sau khi chạy:
 * GUI hiển thị tín hiệu theo thời gian thực
 
 
-
 ## PHẦN 3: Kết quả chạy
 
-Hệ thống được kiểm chứng trên cả môi trường mô phỏng (ModelSim) và thực nghiệm (Python + FPGA).
+Hệ thống được kiểm chứng trên cả môi trường mô phỏng và thực nghiệm.
 Các chế độ neuron được đánh giá bao gồm: RS, IB, Chattering và LTS.
 
 ---
@@ -140,7 +139,7 @@ Kết quả mô phỏng được thực hiện bằng ModelSim thông qua testbe
 * Spike xuất hiện đều theo thời gian
 * Khoảng cách giữa các spike ổn định
 
-<!-- ![RS ModelSim](images/modelsim_rs.png) -->
+!-- ![RS ModelSim](images/RS.png) --
 
 ---
 
@@ -149,7 +148,7 @@ Kết quả mô phỏng được thực hiện bằng ModelSim thông qua testbe
 * Xuất hiện các cụm spike (burst)
 * Có khoảng nghỉ giữa các cụm
 
-<!-- ![IB ModelSim](images/modelsim_ib.png) -->
+!-- ![IB ModelSim](images/IB.png) --
 
 ---
 
@@ -158,7 +157,7 @@ Kết quả mô phỏng được thực hiện bằng ModelSim thông qua testbe
 * Burst với mật độ spike cao
 * Các spike dày và liên tục
 
-<!-- ![Chattering ModelSim](images/modelsim_chattering.png) -->
+!-- ![Chattering ModelSim](images/Chattering.png) --
 
 ---
 
@@ -167,7 +166,7 @@ Kết quả mô phỏng được thực hiện bằng ModelSim thông qua testbe
 * Dễ phát xung với kích thích nhỏ
 * Ngưỡng thấp hơn RS
 
-<!-- ![LTS ModelSim](images/modelsim_lts.png) -->
+!-- ![LTS ModelSim](images/LTS.png) --
 
 ---
 
