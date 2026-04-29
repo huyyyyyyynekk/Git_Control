@@ -108,9 +108,9 @@ if len(raw_bytes) == 4:
 
 ### Hướng dẫn chạy
 
-1. Nạp bitstream bằng Gowin IDE
-2. Sửa `COM_PORT` trong `python_test_4.py`
-3. Chạy:
+- [Gowin EDA](https://www.gowinsemi.com/en/support/download_eda/) (Synthesize + Place & Route)
+- [Gowin Programmer](https://www.gowinsemi.com/en/support/download_eda/) (Nạp bitstream)
+- [Python 3](https://www.python.org/) + [pyserial](https://pypi.org/project/pyserial/) (Testing)
 
 ```bash
 python python_test_4.py
