@@ -1,6 +1,6 @@
 ## PHẦN 1: Cấu trúc hệ thống phần cứng (FPGA Gowin Kiwi 1p5)
 
-## Pinout & Phần cứng
+### Pinout & Phần cứng
 
 | Tín hiệu    | Pin | IO Type  | Pull Mode | Drive | Điện áp | Mô tả               |
 | ----------- | --- | -------- | --------- | ----- | ------- | ------------------- |
