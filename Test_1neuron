@@ -1,1 +1,40 @@
+# HOMIN Neuron Hardware-Software Co-Simulation (FPGA Kiwi 1p5)
 
+[cite_start]Dự án này triển khai mô phỏng phần cứng thời gian thực cho một nơ-ron Spiking Neural Network (SNN) dựa trên mô hình HOMIN (Izhikevich)[cite: 53]. Hệ thống cho phép quan sát điện thế màng (Membrane Potential) và điều chỉnh tham số động thông qua giao tiếp UART giữa FPGA (Gowin Kiwi 1p5) và máy tính (Python GUI).
+
+## 🚀 Tính năng nổi bật
+- **Đồng bộ Bit-True**: Mô hình nơ-ron phần mềm trong Python được thiết kế khớp hoàn toàn với logic số học dấu phẩy tĩnh (Fixed-point Q1.6.9) trong Verilog.
+- [cite_start]**Điều khiển tham số D**: Cho phép thay đổi tham số $D$ (liên quan đến cơ chế phục hồi sau khi spike) thông qua nút bấm cứng S1 trên board hoặc lệnh UART từ giao diện máy tính[cite: 42, 47, 48].
+- **Giám sát thời gian thực**: Hiển thị đồ thị so sánh giữa Hardware (FPGA) và Software (Golden Model) với tần số 30 FPS.
+
+## 🏗 Cấu trúc hệ thống
+
+### 1. Thành phần phần cứng (Verilog)
+- [cite_start]**`uart_top.v`**: Module trung tâm điều khiển luồng dữ liệu[cite: 1]. [cite_start]Quản lý FSM để nhận lệnh từ PC, kích hoạt nơ-ron và đóng gói kết quả 4 bytes gửi ngược lại [cite: 18-29].
+- [cite_start]**`neuron_model.v`**: Thực thi toán học cho mô hình nơ-ron với FSM 3 giai đoạn: Nhân (Stage 1), Tính toán động học (Stage 2), và Cập nhật trạng thái/Spike (Stage 3) [cite: 57, 66-80].
+- **`regfile.v`**: Lưu trữ tham số $D$. [cite_start]Ưu tiên 1 là lệnh từ PC và Ưu tiên 2 là vòng lặp giá trị từ nút bấm ($576 \rightarrow 192 \rightarrow 4096$) [cite: 47-51].
+- [cite_start]**`mul16s_HF7.v`**: Bộ nhân 16-bit có dấu tối ưu hóa cho phép tính $v^2$[cite: 61, 130].
+- [cite_start]**Giao tiếp**: Sử dụng `UART_RX` và `uart_tx` cấu hình ở tốc độ **115200 baud** (với clock 27MHz, `CLKS_PER_BIT = 234`)[cite: 1, 82, 108].
+
+### 2. Giao diện điều khiển (Python)
+- Sử dụng `PyQt5` và `pyqtgraph` để vẽ đồ thị.
+- **Giao thức gói tin (4 bytes)**: `[Byte 3-2: Tham số D hiện tại] [Byte 1-0: Điện thế V]`.
+
+## 🛠 Hướng dẫn sử dụng
+
+### Bước 1: Chuẩn bị phần cứng
+1. Mở **Gowin EDA**, nạp toàn bộ các file `.v` vào dự án.
+2. Gán chân (Physical Constraints) cho board Kiwi 1p5:
+   - `clk`: Chân clock 27MHz.
+   - `rx_serial` / `tx_serial`: Kết nối qua cổng UART (thường qua chip nạp).
+   - [cite_start]`S1`: Nút bấm trên board (đã có bộ chống dội 20ms trong `button_debouncer.v`)[cite: 31].
+3. Tổng hợp và nạp file bitstream xuống mạch.
+
+### Bước 2: Chạy phần mềm
+1. Cài đặt thư viện: `pip install pyserial pyqtgraph numpy PyQt5`.
+2. Kiểm tra cổng COM trong `python_test_4.py` (mặc định là `COM9`).
+3. Chạy script: `python python_test_4.py`.
+
+## 📈 Kết quả
+- **Đồ thị vàng (Hardware)** và **Đồ thị đỏ (Software)** sẽ trùng khớp nhau, minh chứng tính chính xác của mạch số.
+- Khi nhấn nút **S1**, tham số D sẽ thay đổi, làm thay đổi tần số bắn spike của nơ-ron trên cả hai đồ thị.
