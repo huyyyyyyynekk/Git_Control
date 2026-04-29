@@ -2,14 +2,13 @@
 
 ## Pinout & Phần cứng
 
-Cấu hình chân cho FPGA Gowin Kiwi 1p5:
-
-Tín hiệu	Chân (PIN)	Mô tả
-clk	4	Clock hệ thống
-rst_n	35	Reset (active low)
-S1	36	Nút nhấn người dùng
-rx_serial	33	UART RX (từ PC → FPGA)
-tx_serial	34	UART TX (FPGA → PC)
+| Tín hiệu    | Pin | IO Type  | Pull Mode | Drive | Điện áp | Mô tả               |
+| ----------- | --- | -------- | --------- | ----- | ------- | ------------------- |
+| `clk`       | 4   | LVCMOS33 | UP        | —     | 3.3V    | Clock hệ thống      |
+| `rst_n`     | 35  | LVCMOS33 | UP        | —     | 3.3V    | Reset (active low)  |
+| `S1`        | 36  | LVCMOS33 | UP        | —     | 3.3V    | Nút nhấn người dùng |
+| `rx_serial` | 33  | LVCMOS33 | NONE      | —     | 3.3V    | UART RX (PC → FPGA) |
+| `tx_serial` | 34  | LVCMOS33 | NONE      | 8     | 3.3V    | UART TX (FPGA → PC) |
 
 
 ### Giao thức UART 4-Bytes
