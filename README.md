@@ -171,7 +171,7 @@ Kết quả mô phỏng được thực hiện bằng ModelSim thông qua testbe
 #### A.3 Chattering
 
 * Burst với mật độ spike cao
-* Các spike dày và liên tục
+* Các cụm spike dày và liên tục
 
  ![Chattering ModelSim](images/Chattering.png) 
 
@@ -180,7 +180,7 @@ Kết quả mô phỏng được thực hiện bằng ModelSim thông qua testbe
 #### A.4 Low Threshold Spiking (LTS)
 
 * Dễ phát xung với kích thích nhỏ
-* Ngưỡng thấp hơn RS
+* Khoảng nghỉ giữa các spike hẹp
 
  ![LTS ModelSim](images/LTS.png) 
 
