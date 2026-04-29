@@ -1,3 +1,17 @@
+## Mục lục
+
+* [PHẦN 1: Cấu trúc hệ thống phần cứng (FPGA Gowin Kiwi 1p5)](#phần-1-cấu-trúc-hệ-thống-phần-cứng-fpga-gowin-kiwi-1p5)
+
+  * [Giao thức UART 4-Bytes](#giao-thức-uart-4-bytes)
+  * [Cơ chế cập nhật tham số](#cơ-chế-cập-nhật-tham-số)
+  * [Pinout (FPGA Gowin Kiwi 1p5)](#pinout-fpga-gowin-kiwi-1p5)
+
+* [PHẦN 2: Giao tiếp phía PC (Python)](#giao-tiếp-phía-pc-python)
+  
+  * [Giao diện hiển thị](#giao-diện-hiển-thị)
+  * [Hướng dẫn chạy](#hướng-dẫn-chạy)
+
+
 ## PHẦN 1: Cấu trúc hệ thống phần cứng (FPGA Gowin Kiwi 1p5)
 
 ### Pinout & Phần cứng
