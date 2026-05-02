@@ -195,7 +195,7 @@ Kết quả thực nghiệm được thu từ FPGA thông qua UART và hiển th
 * Tín hiệu ổn định, dạng spike đều
 * Khớp với mô phỏng ModelSim
 
-<!-- ![RS Python](images/python_rs.png) -->
+![RS Python](images/RS.jpg)
 
 ---
 
@@ -204,7 +204,7 @@ Kết quả thực nghiệm được thu từ FPGA thông qua UART và hiển th
 * Burst rõ ràng, có chu kỳ
 * Biên độ và dạng sóng tương đồng mô phỏng
 
-<!-- ![IB Python](images/python_ib.png) -->
+![IB Python](images/IB.jpg)
 
 ---
 
@@ -213,7 +213,7 @@ Kết quả thực nghiệm được thu từ FPGA thông qua UART và hiển th
 * Tần số cao, spike dày
 * Phản ánh đúng đặc tính neuron nhanh
 
-<!-- ![Chattering Python](images/python_chattering.png) -->
+![Chattering Python](images/Chattering.jpg)
 
 ---
 
@@ -222,7 +222,7 @@ Kết quả thực nghiệm được thu từ FPGA thông qua UART và hiển th
 * Phát xung ngay cả khi kích thích yếu
 * Dạng sóng nhạy hơn RS
 
-<!-- ![LTS Python](images/python_lts.png) -->
+![LTS Python](images/LTS.jpg)
 
 ---
 
