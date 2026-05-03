@@ -61,17 +61,13 @@
 ├── Implementation/                 # Synthesis & PNR results
 │   ├── gwsynthesis/                # Synthesis reports
 │   └── pnr/                        # Place & Route + bitstream
-│
+│   └── temp/                       # Parser
+|
 ├── Project Files/                  # File project Gowin
 │   ├── 1_neuron_gowin.gprj
 │   ├── 1_neuron_gowin.gprj.user
 │   ├── 1_neuron_gowin.cr.mti
 │   └── 1_neuron_gowin.mpf
-│
-├── Scratch/                        # Test case
-│   ├── max_min.py
-│   ├── print_vals*.py
-│   └── test_mul.py
 │
 └── README.md
 ```
