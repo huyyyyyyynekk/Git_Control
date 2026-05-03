@@ -1,0 +1,20 @@
+# Build folders
+impl/
+
+# Simulation
+*.wlf
+
+# Logs
+*.log
+
+# Bitstream / output
+*.binx
+*.fs
+
+# Temporary files
+*.tmp
+*.bak
+
+# OS files
+.DS_Store
+Thumbs.db
