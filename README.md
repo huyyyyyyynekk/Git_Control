@@ -28,59 +28,52 @@
      * [B.3 Chattering](#b3-chattering)
      * [B.4 Low Threshold Spiking (LTS)](#b4-low-threshold-spiking-lts)
 
-## Cấu trúc Project
+## Project Structure
 
 ```
-1_neuron_gowin_2/
+├── Physical Constraints Files/     # Pin constraints cho FPGA Gowin
+│   └── 1_neuron_gowin.cst          # I/O mapping
 │
-├── 1_neuron_gowin.cr.mti # Gowin project config/meta
-├── 1_neuron_gowin.gprj # Main Gowin project file
-├── 1_neuron_gowin.gprj.user # User-specific settings
-├── 1_neuron_gowin.mpf # FPGA pin/I/O constraints
+├── Timing Constraints Files/       # Timing constraints
+│   └── 1_neuron_gowin.sdc          # Clock & timing setup
 │
-├── hw_v_out.txt # Simulation output data
-├── plot_tb.py # Plot results from testbench
-├── python_test*.py # Python experiment scripts
-├── test_trunc.py # Data truncation test
+├── RTL/                            # RTL Design 
+│   ├── neuron_model.v              # Mô hình neuron chính
+│   ├── regfile.v                   # Register file
+│   ├── mul16s_HF7.v.v              # Multiple 16-bit signed
+│   ├── button_debouncer.v          # Button debouncer
+│   ├── UART_RX.v                   # UART Receiver
+│   ├── uart_tx.v                   # UART Transmitter
+│   └── uart_top.v                  # Top-level UART
 │
-├── sim.do # ModelSim/Questa simulation script
-├── tb_neuron.v # Neuron testbench
-├── tb_shift.v # Shift module/testbench
-├── vsim.wlf # Simulation waveform file
+├── Testbench/                      # Simulation & verification
+│   ├── tb_neuron.v                 # Testbench neuron
+│   ├── tb_shift.v                  # Testbench shift
+│   ├── sim.do                      # Script ModelSim/Questa
+│   └── vsim.wlf                    # Waveform output
 │
-├── impl/ # Implementation results
-│ ├── 1_neuron_gowin_process_config.json
-│ │
-│ ├── gwsynthesis/ # Synthesis outputs
-│ │ ├── *.log
-│ │ ├── *.vg
-│ │ ├── *_syn.rpt.html
-│ │ └── *_resource.html
-│ │
-│ └── pnr/ # Place & Route outputs
-│ ├── *.binx # Bitstream
-│ ├── *.fs
-│ ├── *.log
-│ ├── .rpt.
-│ ├── *.timing_paths
-│ ├── .tr.html
-│ └── device.cfg
+├── Python/                         # Python scripts (analysis & testing)
+│   ├── plot_tb.py                  # Draw graph from data simulation
+│   ├── python_test_4.py            # Testing 
+│   ├── test_trunc.py               # Test truncation
+│   └── hw_v_out.txt                # Data output from simulation
 │
-├── scratch/ # Experimental scripts
-│ ├── max_min.py
-│ ├── print_vals.py
-│ └── test_mul.py
+├── Implementation/                 # Synthesis & PNR results
+│   ├── gwsynthesis/                # Synthesis reports
+│   └── pnr/                        # Place & Route + bitstream
 │
-└── src/ # Source code
-├── 1_neuron_gowin.cst # Constraints
-├── 1_neuron_gowin.sdc # Timing constraints
-├── button_debouncer.v
-├── mul16s_HF7.v.v
-├── neuron_model.v # Main neuron module
-├── regfile.v
-├── UART_RX.v
-├── uart_top.v
-└── uart_tx.v
+├── Project Files/                  # File project Gowin
+│   ├── 1_neuron_gowin.gprj
+│   ├── 1_neuron_gowin.gprj.user
+│   ├── 1_neuron_gowin.cr.mti
+│   └── 1_neuron_gowin.mpf
+│
+├── Scratch/                        # Test case
+│   ├── max_min.py
+│   ├── print_vals*.py
+│   └── test_mul.py
+│
+└── README.md
 ```
 
 ## PHẦN 1: Cấu trúc hệ thống phần cứng (FPGA Gowin Kiwi 1p5)
