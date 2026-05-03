@@ -1,0 +1,45 @@
+F:/GOWIN/1_neuron_gowin/src/uart_top.v {1 {vlog -work work -stats=none F:/GOWIN/1_neuron_gowin/src/uart_top.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module uart_top
+
+Top level modules:
+	uart_top
+
+} {} {}} F:/GOWIN/1_neuron_gowin/src/neuron_model.v {1 {vlog -work work -stats=none F:/GOWIN/1_neuron_gowin/src/neuron_model.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module neuron_model
+
+Top level modules:
+	neuron_model
+
+} {} {}} F:/GOWIN/1_neuron_gowin/src/uart_tx.v {1 {vlog -work work -stats=none F:/GOWIN/1_neuron_gowin/src/uart_tx.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module uart_tx
+
+Top level modules:
+	uart_tx
+
+} {} {}} F:/GOWIN/1_neuron_gowin/src/mul16s_HF7.v.v {1 {vlog -work work -stats=none F:/GOWIN/1_neuron_gowin/src/mul16s_HF7.v.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module mul16s_HF7
+-- Compiling module PDKGENHAX1
+-- Compiling module PDKGENFAX1
+
+Top level modules:
+	mul16s_HF7
+
+} {} {}} F:/GOWIN/1_neuron_gowin/src/UART_RX.v {1 {vlog -work work -stats=none F:/GOWIN/1_neuron_gowin/src/UART_RX.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module UART_RX
+
+Top level modules:
+	UART_RX
+
+} {} {}} F:/GOWIN/1_neuron_gowin/tb_neuron.v {1 {vlog -work work -stats=none F:/GOWIN/1_neuron_gowin/tb_neuron.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module tb_neuron
+
+Top level modules:
+	tb_neuron
+
+} {} {}}

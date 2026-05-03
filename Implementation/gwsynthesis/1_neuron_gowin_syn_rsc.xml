@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module name="uart_top" Register="58" Lut="44" T_Register="257(58)" T_Alu="121(0)" T_Lut="716(44)">
+ <SubModule name="u_btn" Register="24" Lut="39" T_Register="24(24)" T_Lut="39(39)"/>
+ <SubModule name="u_rf" Register="18" Lut="21" T_Register="18(18)" T_Lut="21(21)"/>
+ <SubModule name="u_neuron" Register="85" Alu="121" Lut="48" T_Register="85(85)" T_Alu="121(121)" T_Lut="511(48)">
+  <SubModule name="u_mul" T_Lut="463(0)">
+   <SubModule name="U5602" Lut="72" T_Lut="72(72)"/>
+   <SubModule name="U5618" Lut="14" T_Lut="14(14)"/>
+   <SubModule name="U5634" Lut="31" T_Lut="31(31)"/>
+   <SubModule name="U5650" Lut="25" T_Lut="25(25)"/>
+   <SubModule name="U5666" Lut="29" T_Lut="29(29)"/>
+   <SubModule name="U5682" Lut="9" T_Lut="9(9)"/>
+   <SubModule name="U5698" Lut="51" T_Lut="51(51)"/>
+   <SubModule name="U5699" Lut="32" T_Lut="32(32)"/>
+   <SubModule name="U5700" Lut="22" T_Lut="22(22)"/>
+   <SubModule name="U5701" Lut="13" T_Lut="13(13)"/>
+   <SubModule name="U5702" Lut="30" T_Lut="30(30)"/>
+   <SubModule name="U5703" Lut="8" T_Lut="8(8)"/>
+   <SubModule name="U5704" Lut="60" T_Lut="60(60)"/>
+   <SubModule name="U5705" Lut="7" T_Lut="7(7)"/>
+   <SubModule name="U5706" Lut="27" T_Lut="27(27)"/>
+   <SubModule name="U5707" Lut="10" T_Lut="10(10)"/>
+   <SubModule name="U5708" Lut="23" T_Lut="23(23)"/>
+  </SubModule>
+ </SubModule>
+ <SubModule name="u_rx" Register="40" Lut="48" T_Register="40(40)" T_Lut="48(48)"/>
+ <SubModule name="u_tx" Register="32" Lut="53" T_Register="32(32)" T_Lut="53(53)"/>
+</Module>
