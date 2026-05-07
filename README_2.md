@@ -191,10 +191,6 @@ Giây hẹn mặc định:
 00
 ```
 
-Dữ liệu vẫn được giữ lại sau khi mất nguồn.
-
----
-
 ### 9. Timeout
 
 Trong các chế độ:
