@@ -1,8 +1,8 @@
-# Đồng Hồ Số Có Chức Năng Hẹn Giờ Sử Dụng SN8F5708_EVK / SN32F407_EVK
+# Đồng Hồ Số Có Chức Năng Hẹn Giờ Sử Dụng SN32F407_EVK
 
 ## Giới thiệu
 
-Đây là project xây dựng đồng hồ số có chức năng hẹn giờ sử dụng board SN8F5708_EVK hoặc SN32F407_EVK. Hệ thống sử dụng LED 7 đoạn để hiển thị thời gian theo định dạng HH.MM, hỗ trợ thay đổi giờ/phút, cài đặt báo thức, lưu dữ liệu bằng EEPROM, điều khiển buzzer và xử lý timeout khi không có thao tác người dùng.
+Đây là project xây dựng đồng hồ số có chức năng hẹn giờ sử dụng board SN32F407_EVK. Hệ thống sử dụng LED 7 đoạn để hiển thị thời gian theo định dạng HH.MM, hỗ trợ thay đổi giờ/phút, cài đặt báo thức, lưu dữ liệu bằng EEPROM, điều khiển buzzer và xử lý timeout khi không có thao tác người dùng.
 
 ---
 
@@ -244,21 +244,6 @@ Project gồm các module chính:
 
 ---
 
-## State Machine
-
-```text
-NORMAL MODE
-    ├── SW3 → CHANGE HOUR
-    │              └── SW3 → CHANGE MINUTE
-    │                              └── SW3 → NORMAL
-    │
-    └── SW16 → CHANGE ALARM HOUR
-                   └── SW16 → CHANGE ALARM MINUTE
-                                   └── SW16 → SAVE EEPROM → NORMAL
-```
-
----
-
 ## Môi trường phát triển
 
 * Keil MDK-ARM
@@ -272,21 +257,5 @@ Board hỗ trợ:
 
 ---
 
-## Hướng phát triển tương lai
-
-* Hỗ trợ RTC hardware
-* Hiển thị ngày tháng
-* Nhiều báo thức
-* Stopwatch
-* UART debug
-* Backup pin
-
----
-
-## Tác giả
-
-Project được thực hiện cho cuộc thi:
-
-```text
 MCU HANOI CONTEST
 ```
